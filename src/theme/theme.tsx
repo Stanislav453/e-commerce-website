@@ -15,6 +15,9 @@ export const getDesignTokens = (mode: PaletteMode) => ({
           primary: {
             main: '#fff',
           },
+          secondary: {
+            main: '#000',
+          },
           divider: amber[200],
           background: {
             default: '#eeeded',
@@ -25,13 +28,17 @@ export const getDesignTokens = (mode: PaletteMode) => ({
             secondary: grey[800],
           },
         }
-      : {          primary: {
+      : {
+          primary: {
             main: '#000',
           },
-          divider: deepOrange[700],
+          secondary: {
+            main: '#fff',
+          },
+          // divider: deepOrange[700],
           background: {
             default: '#3e3e3e',
-            paper: deepOrange[900],
+            paper:'#000' ,
           },
           text: {
             primary: '#fff',
