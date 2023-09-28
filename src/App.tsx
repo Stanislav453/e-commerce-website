@@ -4,6 +4,9 @@ import { CssBaseline } from '@mui/material';
 import { useThemeContext } from './theme/ThemeContextProvider';
 import { Header} from './component/Header';
 import { Route, Routes } from 'react-router-dom';
+import { About } from './Pages/About';
+import { Product } from './Pages/Product';
+import { Contact } from './Pages/Contact';
 
 export const App = () => {
   const { theme } = useThemeContext();
@@ -13,9 +16,10 @@ export const App = () => {
       <ThemeProvider theme={theme}>
       <CssBaseline />
       <Routes>
-        <Route path='/' element={<Header />} />
-        {/* <Route path='/' element={<Product/>} />
-        <Route path='/' element={<Contact />} /> */}
+        <Route path='home' element={<Header />} />
+        <Route path='about' element={<About />} />
+        <Route path='product' element={<Product/>} />
+        <Route path='contact' element={<Contact />} />
         <Route path='*' element={"shit"} />
 
       </Routes>
