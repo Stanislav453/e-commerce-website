@@ -108,6 +108,7 @@ export const Header = () => {
             {pages.map((page) => (
               <Button
                 key={page}
+                href={page}
                 // onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'inherit', display: 'block' }}
               >
