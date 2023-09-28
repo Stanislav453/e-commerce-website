@@ -1,15 +1,31 @@
+import React from 'react';
 import { ThemeProvider } from '@emotion/react';
 import { CssBaseline } from '@mui/material';
 import { useThemeContext } from './theme/ThemeContextProvider';
-import { Navigation } from './component/Navigation';
+import { Header} from './component/Header';
+import { Route, Routes } from 'react-router-dom';
 
 export const App = () => {
   const { theme } = useThemeContext();
 
   return (
-    <ThemeProvider theme={theme}>
+    <React.Fragment>
+      <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Navigation />
-    </ThemeProvider>
+      <Routes>
+        <Route path='/' element={<Header />} />
+        {/* <Route path='/' element={<Product/>} />
+        <Route path='/' element={<Contact />} /> */}
+        <Route path='*' element={"shit"} />
+
+      </Routes>
+      </ThemeProvider>
+
+    </React.Fragment>
+    
+    // <ThemeProvider theme={theme}>
+    //   <CssBaseline />
+    //   <Header />
+    // </ThemeProvider>
   );
 };
