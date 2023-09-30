@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 
 export const Banner= () => {
   return (
-    <Stack direction={{ md: 'row', sm: 'column' }} gap={1}>
+    <Stack direction={{ md: 'row', sm: 'column' }} gap={1} bgcolor={"transparent"}>
       <Box flex={1}>
         <Box height={'650px'} sx={{ backgroundColor: '#000' }}></Box>
       </Box>
